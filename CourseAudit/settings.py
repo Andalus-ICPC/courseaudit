@@ -26,7 +26,7 @@ SECRET_KEY = 'ibhz__qk2he$8)q=i@mrrp($@8+)8k3g6pi55+s^ji87g-nzx4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
