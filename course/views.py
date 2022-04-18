@@ -75,14 +75,14 @@ research = [
 major_elective = [
     ("ECE2202", "Electronic Circuit II", 4, "ECE2201"),
     ("CSE2320", "System Programming", 3, "None"),
-    ("CSE3310", "Computer Graphics", 3, "None"), #2
+    ("CSE3310", "Computer Graphics", 3, "None"), #0-2
 
     ("CSE3306", "Web Programming", 3, "None"),
     # ("CSE3310", "Computer Graphics", 3, "None"),
     ("CSE3312", "Advanced Programming", 3, "CSE2202"),
     ("CSE3308", "Software Requirement Engineering (3rd year)", 3, "CSE3213"),
     ("CSE4304", "Information Storage and Retrieval", 3, "None"),
-    ("CSE3314", "Microcomputer & interfacing", 3, "CSE3203"), #7
+    ("CSE3314", "Microcomputer & interfacing", 3, "CSE3203"), #3-7
 
     ("ECE2204", "Signals and Systems", 3, "Math2101"),
     ("CSE4303", "Multimedia Technologies", 3, "None"),
@@ -108,16 +108,16 @@ major_elective = [
     ("CSE5313", "Human Computer Interaction", 3, "None"),
     ("CSE5315", "Introduction to Audio & Video Production", 3, "None"),
     ("CSE5319", "Advanced Network", 3, "CSE3221"),
-    ("PCE3204", "Introduction to Control Systems", 3, "PCE3201"), #20-25
+    ("PCE3204", "Introduction to Control Systems", 3, "PCE3201"), #20-26
 
-    ("CSE5312", "Computer Ethic & Social Issues", 3, "None"),
+    ("CSE5312", "Computer Ethics & Social Issues", 3, "None"),
     ("CSE5304", "Computer Games & Animation", 3, "None"),
     # ("CSE5306", "Special Topics in Computer Science and Engineering", 3, "None"),
     ("CSE5308", "Real time and Embedded Systems", 3, "ECE4202"),
     ("CSE5310", "Software Quality & Testing", 3, "CSE3213"),
     ("PCE5308", "Introduction to Robotics and Industrial Automation", 3, "PCE3204"),
-    # 26-30
-    ("CSE3308", "Software Requirement Engineering (5th year)", 3, "CSE3213"),
+    ("CSE3308*", "Software Requirement Engineering (5th year)", 3, "CSE3213"),
+    # 27-32
 
 ]
 
@@ -149,7 +149,7 @@ for i in all_course_group:
 
 elective = [(0, 3, 1, "2nd year 2nd semister"), (3, 8, 2, "3rd year 2nd semister"), 
             (8, 14, 3, "4th year 1st semister"), (14, 20, 3, "4th year 2nd semister"),
-            (20, 26, 3, "5th year 1st semister"), (26, 33, 3, "5th year 2nd semister")]
+            (20, 27, 3, "5th year 1st semister"), (27, 33, 3, "5th year 2nd semister")]
 
 all_course_dict = {}
 for i in all_course_group:
@@ -201,6 +201,7 @@ def ajax_audit(request):
                     reserve.append(j[0])
         if c < y:
             semester_elective.append((i[3], y-c))
+    print(semester_elective)
     if semester_elective:
         not_taken["major_elective"] = semester_elective
     else:
