@@ -42,7 +42,6 @@ basic_mandatory_school = [
     ("PCE2101", "Fundamentals of Electrical Engineering", 4, "Math1101"),
     ("ECE2101", "Electronic Circuit I", 4, "PCE2101"),
     ("CSE2112", "Data Structures and Algorithms", 3, "CSE1102"),
-    # ("ISE2101", "Fundamentals of Information", 3, "None"),
 ]
 
 basic_mandatory_program = [
@@ -52,7 +51,6 @@ basic_mandatory_program = [
 
 major_mandatory = [
     ("CSE2202", "Object Oriented Programming", 3, "None"),
-    # ("CSE2222", "Data Structures and Algorithm", 3, "CSE1102"),
     ("CSE3211", "Algorithms", 3, "CSE2222 or CSE2101"),
     ("ECE3204", "Digital Logic Design", 3, "ECE2201"),
     ("CSE3203", "Computer Architecture & Organization", 3, "ECE3204"),
@@ -78,7 +76,6 @@ major_elective = [
     ("CSE3310", "Computer Graphics", 3, "None"), #0-2
 
     ("CSE3306", "Web Programming", 3, "None"),
-    # ("CSE3310", "Computer Graphics", 3, "None"),
     ("CSE3312", "Advanced Programming", 3, "CSE2202"),
     ("CSE3308", "Software Requirement Engineering (3rd year)", 3, "CSE3213"),
     ("CSE4304", "Information Storage and Retrieval", 3, "None"),
@@ -86,39 +83,33 @@ major_elective = [
 
     ("ECE2204", "Signals and Systems", 3, "Math2101"),
     ("CSE4303", "Multimedia Technologies", 3, "None"),
-    # ("CSE4307", "Network and information security", 3, "None"),
     ("CSE4311", "Mobile Computing and Applications", 3, "CSE2202"),
     ("CSE5317", "Introduction to Data mining", 3, "CSE3207"),
     ("CSE5321", "Introduction to NLP", 3, "None"),
-    ("CSE4309", "Software Design and Architecture", 3, "CSE3213"), #8-13
+    ("CSE4307", "Computer Systems Security", 3, "None"),
+    ("CSE4309", "Software Design and Architecture", 3, "CSE3213"), #8-14
 
     ("ECE3205", "Digital Signal Processing", 3, "ECE2204"),
     ("PCE3201", "Electrical Network Analysis and synthesis", 3, "ECE2206"),
-    # ("CSE4312", "Introduction to Computer Vision", 3, "None"),
     ("CSE4310", "Compiler Design", 3, "CSE4201"),
-    # ("CSE4302", "Project Management", 3, "None"),
-    ("CSE5306", "Special Topics in Computer Science and Engineering", 3, None),
+    ("CSE5306", "Special Topics in Computer Science and Engineering", 3, "None"),
     ("ECE5303", "VLSI Design", 3, "CSE3203"),
-    ("CSE5311", "Image Processing", 3, "ECE3205"), #14-19
+    ("CSE5311", "Image Processing", 3, "ECE3205"), #15-20
 
     ("CSE5307", "Distributed Systems", 3, "CSE2202"),
     ("CSE5309", "Wireless Mobile Networks", 3, "CSE3221"),
     ("CSE4312", "Introduction to Computer Vision", 3, "None"),
-    # ("CSE5311", "Image Processing", 3, "ECE3205"),
     ("CSE5313", "Human Computer Interaction", 3, "None"),
     ("CSE5315", "Introduction to Audio & Video Production", 3, "None"),
     ("CSE5319", "Advanced Network", 3, "CSE3221"),
-    ("PCE3204", "Introduction to Control Systems", 3, "PCE3201"), #20-26
+    ("PCE3204", "Introduction to Control Systems", 3, "PCE3201"), #21-27
 
     ("CSE5312", "Computer Ethics & Social Issues", 3, "None"),
     ("CSE5304", "Computer Games & Animation", 3, "None"),
-    # ("CSE5306", "Special Topics in Computer Science and Engineering", 3, "None"),
     ("CSE5308", "Real time and Embedded Systems", 3, "ECE4202"),
     ("CSE5310", "Software Quality & Testing", 3, "CSE3213"),
     ("PCE5308", "Introduction to Robotics and Industrial Automation", 3, "PCE3204"),
-    ("CSE3308*", "Software Requirement Engineering (5th year)", 3, "CSE3213"),
-    # 27-32
-
+    ("CSE3308*", "Software Requirement Engineering (5th year)", 3, "CSE3213")  # 28-33
 ]
 
 mandatory = {
@@ -148,8 +139,8 @@ for i in all_course_group:
         all_course_code.append(j[0])
 
 elective = [(0, 3, 1, "2nd year 2nd semister"), (3, 8, 2, "3rd year 2nd semister"), 
-            (8, 14, 3, "4th year 1st semister"), (14, 20, 3, "4th year 2nd semister"),
-            (20, 27, 3, "5th year 1st semister"), (27, 33, 3, "5th year 2nd semister")]
+            (8, 15, 3, "4th year 1st semister"), (15, 21, 3, "4th year 2nd semister"),
+            (21, 28, 3, "5th year 1st semister"), (28, 34, 3, "5th year 2nd semister")]
 
 all_course_dict = {}
 for i in all_course_group:

@@ -1,3 +1,4 @@
+course_audit_supervisor.conf
 *.log
 *.conf
 *.pyc
